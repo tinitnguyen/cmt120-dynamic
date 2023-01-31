@@ -1,0 +1,57 @@
+body {
+  font-family: "Arial";
+  background-color: #333366;
+  color: white;
+  padding: 8em 16em;
+}
+
+header {
+  display: block;
+  margin: 0 0 4em 0;
+  font-size: 18px;
+}
+
+.welcometext {
+  display: inline-block;
+  margin-top: 0px;
+}
+
+.navlinkleft {
+  float: right;
+  margin-right: 10px;
+}
+
+.navlinkright {
+  float: right;
+}
+
+.title {
+  text-align: center;
+}
+
+.flashes {
+  color: #bcc0de;
+  list-style: none;
+  padding-left: 0;
+}
+
+footer {
+  margin: 6em 0 0 0;
+  text-align: right;
+}
+
+h1 {
+  color: #ff9999;
+}
+
+h2 {
+  color: #9ccfd8;
+}
+
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: #bcc0de;
+}

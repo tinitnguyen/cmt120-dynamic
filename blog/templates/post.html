@@ -1,0 +1,32 @@
+{% extends "layout.html" %} {% block content %}
+<div class="posts">
+  <h2 class="post_title_indv">{{ post.title }}</h2>
+  <img
+    src="{{ url_for('static', filename='img/' + post.image_file)}}"
+    style="width: 400px; height: 400px; object-fit: cover"
+  >
+</div>
+
+<p>{{ post.content }}</p>
+<br>
+<br>
+<h3 style="color:#ffcccc">comments</h3>
+{% for comment in comments %}
+    <p style="color:#D3D3D3">[{{ comment.author_name }}] {{ comment.content }}</p>
+    {% endfor %}
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        <div class="comment_text">
+            {% if current_user.is_authenticated %}
+            {{ form.comment.label }} {{ form.comment }}
+            {% for error in form.errors.items()  %}<span style="color: red;">[{{ error1 }}]</span>
+            {% endfor %}
+        </div>
+        <div class="">{{ form.submit() }}</div>
+    </form>
+    {% else %}
+    <b>Please register/login to comment!</b>
+    {% endif %}
+</div>
+
+{% endblock content %}
