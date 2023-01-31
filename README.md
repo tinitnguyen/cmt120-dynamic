@@ -1,1 +1,1 @@
-# cmt120-dynamic
+# Dynamic Web Application
